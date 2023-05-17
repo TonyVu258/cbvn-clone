@@ -6,35 +6,43 @@ import Section from "../../components/Section/Section";
 import "../styles/index.css";
 
 const DATA_BANNER_PROMO = {
-    first:{
-        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6352__zoneid=848__cb=d74e9fba31__oadest=https%3A%2F%2Fcareerstart.vn%2F",
-        target: "_blank",
-        img1Src: "https://ads.careerbuilder.vn/www/images/a5b2628391fac3d894caa7e1a29d12fa.jpg",
-        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6352&campaignid=1749&zoneid=848&loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&cb=d74e9fba31",
-        imgAlt: "Careerstart tuyendung"
-    },
-    second:{
-        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6716__zoneid=848__cb=f68f85cfd4__oadest=https%3A%2F%2Fcareerbuilder.vn%2Fvi%2Ftalentcommunity%2Fcareerbuilder-cong-bo-top-100-nha-tuyen-dung-yeu-thich-nam-2022.35A522B8.html",
-        target: "_blank",
-        img1Src: "https://ads.careerbuilder.vn/www/images/40322bfe0026051c3092d837b500e854.jpg",
-        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6716&amp;campaignid=1812&amp;zoneid=848&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=f68f85cfd4",
-        imgAlt: "EOC Result 2022"
-    },
-    third:{
-        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4738__zoneid=850__cb=331b419b20__oadest=https%3A%2F%2Fvietnamsalary.careerbuilder.vn%2F%3Futm_source%3DCB%26utm_medium%3DVNSalary%26utm_campaign%3DCBVNSalary",
-        target: "_blank",
-        img1Src: "https://ads.careerbuilder.vn/www/images/cd36bdd64ecdebbeeafc6347057ee992.png",
-        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4738&amp;campaignid=1349&amp;zoneid=850&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=331b419b20",
-        imgAlt: "Vietnam Salary"
-    },
-    fourth:{
-        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4739__zoneid=851__cb=77a765a0ce__oadest=https%3A%2F%2Fvieclamit.careerbuilder.vn%2F",
-        target: "_blank",
-        img1Src: "https://ads.careerbuilder.vn/www/images/b818531cf76fdafbf772e3d95f5f102a.png",
-        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4739&amp;campaignid=1349&amp;zoneid=851&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=77a765a0ce",
-        imgAlt: "Vieclam IT"
-    }
-}
+  first: {
+    href: "https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6352__zoneid=848__cb=d74e9fba31__oadest=https%3A%2F%2Fcareerstart.vn%2F",
+    target: "_blank",
+    img1Src:
+      "https://ads.careerbuilder.vn/www/images/a5b2628391fac3d894caa7e1a29d12fa.jpg",
+    img2Src:
+      "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6352&campaignid=1749&zoneid=848&loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&cb=d74e9fba31",
+    imgAlt: "Careerstart tuyendung",
+  },
+  second: {
+    href: "https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6716__zoneid=848__cb=f68f85cfd4__oadest=https%3A%2F%2Fcareerbuilder.vn%2Fvi%2Ftalentcommunity%2Fcareerbuilder-cong-bo-top-100-nha-tuyen-dung-yeu-thich-nam-2022.35A522B8.html",
+    target: "_blank",
+    img1Src:
+      "https://ads.careerbuilder.vn/www/images/40322bfe0026051c3092d837b500e854.jpg",
+    img2Src:
+      "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6716&amp;campaignid=1812&amp;zoneid=848&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=f68f85cfd4",
+    imgAlt: "EOC Result 2022",
+  },
+  third: {
+    href: "https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4738__zoneid=850__cb=331b419b20__oadest=https%3A%2F%2Fvietnamsalary.careerbuilder.vn%2F%3Futm_source%3DCB%26utm_medium%3DVNSalary%26utm_campaign%3DCBVNSalary",
+    target: "_blank",
+    img1Src:
+      "https://ads.careerbuilder.vn/www/images/cd36bdd64ecdebbeeafc6347057ee992.png",
+    img2Src:
+      "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4738&amp;campaignid=1349&amp;zoneid=850&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=331b419b20",
+    imgAlt: "Vietnam Salary",
+  },
+  fourth: {
+    href: "https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4739__zoneid=851__cb=77a765a0ce__oadest=https%3A%2F%2Fvieclamit.careerbuilder.vn%2F",
+    target: "_blank",
+    img1Src:
+      "https://ads.careerbuilder.vn/www/images/b818531cf76fdafbf772e3d95f5f102a.png",
+    img2Src:
+      "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4739&amp;campaignid=1349&amp;zoneid=851&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=77a765a0ce",
+    imgAlt: "Vieclam IT",
+  },
+};
 
 export default function Home() {
   return (
@@ -443,14 +451,303 @@ export default function Home() {
         </div>
       </Section>
       <Section css={"banner-promo cb-section cb-section-border-bottom"}>
-      <div className="container">
-        <div className="row">
-          <BannerPromo children={DATA_BANNER_PROMO.first}/>
-          <BannerPromo children={DATA_BANNER_PROMO.second}/>
-          <BannerPromo children={DATA_BANNER_PROMO.third}/>
-          <BannerPromo children={DATA_BANNER_PROMO.fourth}/>
+        <div className="container">
+          <div className="row">
+            <BannerPromo>{DATA_BANNER_PROMO.first}</BannerPromo>
+            <BannerPromo>{DATA_BANNER_PROMO.second}</BannerPromo>
+            <BannerPromo>{DATA_BANNER_PROMO.third}</BannerPromo>
+            <BannerPromo>{DATA_BANNER_PROMO.fourth}</BannerPromo>
+          </div>
         </div>
-      </div>
+      </Section>
+      <Section css={"career-key cb-section"}>
+          <div className="container">
+            <div className="cb-title cb-title-center">
+              <h2>Ngành Nghề Trọng Điểm</h2>
+            </div>
+            <div className="career-key-slide">
+              <div className="swiper-container">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/2.png"
+                            alt="Kế toán / Kiểm toán"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/ke-toan-kiem-toan-c2-vi.html"
+                              title="Kế toán / Kiểm toán"
+                            >
+                              Kế toán / Kiểm toán
+                            </a>
+                          </h3>
+                          <span>(2.222 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/ke-toan-kiem-toan-c2-vi.html"
+                        title="Kế toán / Kiểm toán"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img src="images/png/22.png" alt="Nhân sự" />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/nhan-su-c22-vi.html"
+                              title="Nhân sự"
+                            >
+                              Nhân sự
+                            </a>
+                          </h3>
+                          <span>(988 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/nhan-su-c22-vi.html"
+                        title="Nhân sự"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img src="images/png/30.png" alt="Bán lẻ / Bán sỉ" />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/ban-le-ban-si-c30-vi.html"
+                              title="Bán lẻ / Bán sỉ"
+                            >
+                              Bán lẻ / Bán sỉ
+                            </a>
+                          </h3>
+                          <span>(2.059 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/ban-le-ban-si-c30-vi.html"
+                        title="Bán lẻ / Bán sỉ"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/59.png"
+                            alt="Tài chính / Đầu tư"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/tai-chinh-dau-tu-c59-vi.html"
+                              title="Tài chính / Đầu tư"
+                            >
+                              Tài chính / Đầu tư
+                            </a>
+                          </h3>
+                          <span>(2.768 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/tai-chinh-dau-tu-c59-vi.html"
+                        title="Tài chính / Đầu tư"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img src="images/png/8.png" alt="Xây dựng" />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/xay-dung-c8-vi.html"
+                              title="Xây dựng"
+                            >
+                              Xây dựng
+                            </a>
+                          </h3>
+                          <span>(847 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/xay-dung-c8-vi.html"
+                        title="Xây dựng"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img src="images/png/19.png" alt="Ngân hàng" />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/ngan-hang-c19-vi.html"
+                              title="Ngân hàng"
+                            >
+                              Ngân hàng
+                            </a>
+                          </h3>
+                          <span>(3.165 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/ngan-hang-c19-vi.html"
+                        title="Ngân hàng"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/12.png"
+                            alt="Dịch vụ khách hàng"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/dich-vu-khach-hang-c12-vi.html"
+                              title="Dịch vụ khách hàng"
+                            >
+                              Dịch vụ khách hàng
+                            </a>
+                          </h3>
+                          <span>(2.150 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/dich-vu-khach-hang-c12-vi.html"
+                        title="Dịch vụ khách hàng"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/25.png"
+                            alt="Sản xuất / Vận hành sản xuất"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/san-xuat-van-hanh-san-xuat-c25-vi.html"
+                              title="Sản xuất / Vận hành sản xuất"
+                            >
+                              Sản xuất / Vận hành sản xuất
+                            </a>
+                          </h3>
+                          <span>(1.081 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/san-xuat-van-hanh-san-xuat-c25-vi.html"
+                        title="Sản xuất / Vận hành sản xuất"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/17.png"
+                            alt="Quản lý điều hành"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/quan-ly-dieu-hanh-c17-vi.html"
+                              title="Quản lý điều hành"
+                            >
+                              Quản lý điều hành
+                            </a>
+                          </h3>
+                          <span>(918 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/quan-ly-dieu-hanh-c17-vi.html"
+                        title="Quản lý điều hành"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="item">
+                      <div className="inner">
+                        <div className="box-icon">
+                          <img
+                            src="images/png/48.png"
+                            alt="Điện / Điện tử / Điện lạnh"
+                          />
+                        </div>
+                        <div className="box-desc">
+                          <h3>
+                            <a
+                              href="https://careerbuilder.vn/viec-lam/dien-dien-tu-dien-lanh-c48-vi.html"
+                              title="Điện / Điện tử / Điện lạnh"
+                            >
+                              Điện / Điện tử / Điện lạnh
+                            </a>
+                          </h3>
+                          <span>(1.089 việc làm khác)</span>
+                        </div>
+                      </div>
+                      <a
+                        href="https://careerbuilder.vn/viec-lam/dien-dien-tu-dien-lanh-c48-vi.html"
+                        title="Điện / Điện tử / Điện lạnh"
+                        className="link"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="swiper-navigation">
+                <div className="swiper-btn swiper-prev">
+                  <em className="lnr lnr-chevron-left" />
+                </div>
+                <div className="swiper-btn swiper-next">
+                  <em className="lnr lnr-chevron-right" />
+                </div>
+              </div>
+            </div>
+          </div>
       </Section>
     </>
   );

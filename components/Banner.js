@@ -51,13 +51,13 @@ function Banner() {
                 id="pc-swiper-wrapper"
               >
                 <SwiperSlide>
-                  <BannerItem children={BANNER_DATA.first} />
+                  <BannerItem>{BANNER_DATA.first}</BannerItem>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <BannerItem children={BANNER_DATA.second} />
+                  <BannerItem>{BANNER_DATA.second}</BannerItem>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <BannerItem children={BANNER_DATA.third} />
+                  <BannerItem>{BANNER_DATA.third}</BannerItem>
                 </SwiperSlide>
               </Swiper>
             </div>
