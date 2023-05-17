@@ -1,5 +1,3 @@
-"use client";
-import { createContext } from "react";
 import Link from "next/link";
 import React from "react";
 import Section from "./Section/Section";

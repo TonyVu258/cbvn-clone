@@ -1,9 +1,13 @@
+"use client";
+import { Swiper } from "swiper/react";
 import Banner from "../../components/Banner";
 import BannerPromo from "../../components/BannerPromo";
 import Header from "../../components/Header";
 import JobsItem from "../../components/JobsItem/JobsItem";
 import Section from "../../components/Section/Section";
 import "../styles/index.css";
+import CareerKey from "../../components/JobsItem/CareerKey";
+import Talen from "../../components/JobsItem/Talen";
 
 const DATA_BANNER_PROMO = {
   first: {
@@ -450,7 +454,10 @@ export default function Home() {
           </form>
         </div>
       </Section>
-      <Section css={"banner-promo cb-section cb-section-border-bottom"}>
+      <Section
+        css={"banner-promo cb-section cb-section-border-bottom"}
+        style={{ border: "none" }}
+      >
         <div className="container">
           <div className="row">
             <BannerPromo>{DATA_BANNER_PROMO.first}</BannerPromo>
@@ -461,293 +468,255 @@ export default function Home() {
         </div>
       </Section>
       <Section css={"career-key cb-section"}>
-          <div className="container">
-            <div className="cb-title cb-title-center">
-              <h2>Ngành Nghề Trọng Điểm</h2>
-            </div>
-            <div className="career-key-slide">
-              <div className="swiper-container">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/2.png"
-                            alt="Kế toán / Kiểm toán"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/ke-toan-kiem-toan-c2-vi.html"
-                              title="Kế toán / Kiểm toán"
-                            >
-                              Kế toán / Kiểm toán
-                            </a>
-                          </h3>
-                          <span>(2.222 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/ke-toan-kiem-toan-c2-vi.html"
-                        title="Kế toán / Kiểm toán"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img src="images/png/22.png" alt="Nhân sự" />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/nhan-su-c22-vi.html"
-                              title="Nhân sự"
-                            >
-                              Nhân sự
-                            </a>
-                          </h3>
-                          <span>(988 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/nhan-su-c22-vi.html"
-                        title="Nhân sự"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img src="images/png/30.png" alt="Bán lẻ / Bán sỉ" />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/ban-le-ban-si-c30-vi.html"
-                              title="Bán lẻ / Bán sỉ"
-                            >
-                              Bán lẻ / Bán sỉ
-                            </a>
-                          </h3>
-                          <span>(2.059 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/ban-le-ban-si-c30-vi.html"
-                        title="Bán lẻ / Bán sỉ"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/59.png"
-                            alt="Tài chính / Đầu tư"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/tai-chinh-dau-tu-c59-vi.html"
-                              title="Tài chính / Đầu tư"
-                            >
-                              Tài chính / Đầu tư
-                            </a>
-                          </h3>
-                          <span>(2.768 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/tai-chinh-dau-tu-c59-vi.html"
-                        title="Tài chính / Đầu tư"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img src="images/png/8.png" alt="Xây dựng" />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/xay-dung-c8-vi.html"
-                              title="Xây dựng"
-                            >
-                              Xây dựng
-                            </a>
-                          </h3>
-                          <span>(847 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/xay-dung-c8-vi.html"
-                        title="Xây dựng"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img src="images/png/19.png" alt="Ngân hàng" />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/ngan-hang-c19-vi.html"
-                              title="Ngân hàng"
-                            >
-                              Ngân hàng
-                            </a>
-                          </h3>
-                          <span>(3.165 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/ngan-hang-c19-vi.html"
-                        title="Ngân hàng"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/12.png"
-                            alt="Dịch vụ khách hàng"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/dich-vu-khach-hang-c12-vi.html"
-                              title="Dịch vụ khách hàng"
-                            >
-                              Dịch vụ khách hàng
-                            </a>
-                          </h3>
-                          <span>(2.150 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/dich-vu-khach-hang-c12-vi.html"
-                        title="Dịch vụ khách hàng"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/25.png"
-                            alt="Sản xuất / Vận hành sản xuất"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/san-xuat-van-hanh-san-xuat-c25-vi.html"
-                              title="Sản xuất / Vận hành sản xuất"
-                            >
-                              Sản xuất / Vận hành sản xuất
-                            </a>
-                          </h3>
-                          <span>(1.081 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/san-xuat-van-hanh-san-xuat-c25-vi.html"
-                        title="Sản xuất / Vận hành sản xuất"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/17.png"
-                            alt="Quản lý điều hành"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/quan-ly-dieu-hanh-c17-vi.html"
-                              title="Quản lý điều hành"
-                            >
-                              Quản lý điều hành
-                            </a>
-                          </h3>
-                          <span>(918 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/quan-ly-dieu-hanh-c17-vi.html"
-                        title="Quản lý điều hành"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="item">
-                      <div className="inner">
-                        <div className="box-icon">
-                          <img
-                            src="images/png/48.png"
-                            alt="Điện / Điện tử / Điện lạnh"
-                          />
-                        </div>
-                        <div className="box-desc">
-                          <h3>
-                            <a
-                              href="https://careerbuilder.vn/viec-lam/dien-dien-tu-dien-lanh-c48-vi.html"
-                              title="Điện / Điện tử / Điện lạnh"
-                            >
-                              Điện / Điện tử / Điện lạnh
-                            </a>
-                          </h3>
-                          <span>(1.089 việc làm khác)</span>
-                        </div>
-                      </div>
-                      <a
-                        href="https://careerbuilder.vn/viec-lam/dien-dien-tu-dien-lanh-c48-vi.html"
-                        title="Điện / Điện tử / Điện lạnh"
-                        className="link"
-                      />
-                    </div>
-                  </div>
-                </div>
+        <div className="container">
+          <div className="cb-title cb-title-center">
+            <h2>Ngành Nghề Trọng Điểm</h2>
+          </div>
+          <div className="career-key-slide">
+              <CareerKey />
+            <div className="swiper-navigation">
+              <div
+                className="swiper-btn swiper-prev"
+                style={{ background: "transparent", marginLeft: "-40px" }}
+              >
+                <em
+                  className="lnr lnr-chevron-left"
+                  style={{ background: "transparent", marginRight: "-40px" }}
+                />
               </div>
-              <div className="swiper-navigation">
-                <div className="swiper-btn swiper-prev">
-                  <em className="lnr lnr-chevron-left" />
-                </div>
-                <div className="swiper-btn swiper-next">
-                  <em className="lnr lnr-chevron-right" />
-                </div>
+              <div className="swiper-btn swiper-next">
+                <em className="lnr lnr-chevron-right" />
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+      <Section css={"talent-network cb-section cb-section-border-bottom"}>
+        <div className="container">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-5">
+              <div
+                className="title-wrap lazy-bg bg-[url(https://static.careerbuilder.vn/themes/careerbuilder/img/home/bg-2.png)]"
+                data-src="./img/home/bg-2.png"
+              >
+                <div className="title">
+                  <div className="quote-left">
+                    <img
+                      src="https://static.careerbuilder.vn/themes/careerbuilder/img/home/quote1.png"
+                      alt="careerbuilder"
+                    />
+                  </div>
+                  <h2>
+                    Gia tăng cơ hội nghề nghiệp{" "}
+                    <span>
+                      khi kết nối cùng các công ty hàng đầu tại TalentNetwork
+                    </span>
+                  </h2>
+                  <div className="quote-right">
+                    <img
+                      src="https://static.careerbuilder.vn/themes/careerbuilder/img/home/quote2.png"
+                      alt="careerbuilder"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <div className="row">
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://tuyendung.sonha.com.vn"
+                        target="_blank"
+                        title="Tập đoàn Sơn Hà"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_sonha_1669705136_1669889619.png"
+                          alt="Tập đoàn Sơn Hà"
+                          title="Tập đoàn Sơn Hà"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://crccareers.com"
+                        target="_blank"
+                        title="CRC Sport & Lifestyle"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_03_1651637278_1660619617.jpg"
+                          alt="CRC Sport & Lifestyle"
+                          title="CRC Sport & Lifestyle"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://career.cc1.vn"
+                        target="_blank"
+                        title="Tổng công ty xây dựng số 1"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_1659609091.jpg"
+                          alt="Tổng công ty xây dựng số 1"
+                          title="Tổng công ty xây dựng số 1"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://tuyendung.decofi.vn"
+                        target="_blank"
+                        title="Decofi"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_03_1656052165_1657780600.jpg"
+                          alt="Decofi"
+                          title="Decofi"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://tuyendunghoanggia.com"
+                        target="_blank"
+                        title="Royal Group"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/royal_1656387085.jpg"
+                          alt="Royal Group"
+                          title="Royal Group"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://nekoglobal.talentnetwork.vn"
+                        target="_blank"
+                        title="Neko global"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_1652779932.jpg"
+                          alt="Neko global"
+                          title="Neko global"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://finhay.talentnetwork.vn"
+                        target="_blank"
+                        title="Finhay"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/logo_finhay_1651804999.png"
+                          alt="Finhay"
+                          title="Finhay"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-4 col-lg-3 col-app-intro">
+                  <div className="item">
+                    <div className="image">
+                      <a
+                        href="https://career.vanphu.vn"
+                        target="_blank"
+                        title="Văn Phú - Invest"
+                        rel="nofollow"
+                      >
+                        <img
+                          className="lazy-bg"
+                          src="https://images.careerbuilder.vn/logotalent/173x90/vanphu_1648778182.png"
+                          alt="Văn Phú - Invest"
+                          title="Văn Phú - Invest"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="view-more">
+                <a
+                  target="_blank"
+                  href="https://careerbuilder.vn/vi/talentnetwork"
+                >
+                  Xem thêm
+                  <span className="mdi mdi-arrow-right" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section css={"cb-section career-development"}>
+        <div className="container">
+          <div className="cb-title cb-title-center">
+            <h2>
+              <span>Cẩm nang nghề nghiệp</span>
+            </h2>
+          </div>
+          <div className="career-development-slide">
+            <div className="swiper-container">
+              <Talen/>
+            </div>
+            <div className="swiper-prev">
+              <span className="lnr lnr-chevron-left" />
+            </div>
+            <div className="swiper-next">
+              <span className="lnr lnr-chevron-right" />
+            </div>
+          </div>
+          <div className="view-more">
+            <a
+              target="_blank"
+              href="https://careerbuilder.vn/vi/talentcommunity"
+            >
+              Xem thêm
+              <span className="mdi mdi-arrow-right" />
+            </a>
+          </div>
+        </div>
       </Section>
     </>
   );
