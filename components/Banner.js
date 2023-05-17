@@ -1,6 +1,33 @@
+"use client";
+import { createContext } from "react";
 import Link from "next/link";
 import React from "react";
 import Section from "./Section/Section";
+import { Swiper, SwiperSlide } from "swiper/react";
+import BannerItem from "./BannerItem";
+import { Autoplay, EffectFade, Pagination } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
+const BANNER_DATA = {
+    first: {
+        href: 'https://careerbuilder.vn/vi/jobseekers/ajax/counterbannerclick?url=aHR0cHM6Ly9jYXJlZXJidWlsZGVyLnZuL3ZpL3RhbGVudGNvbW11bml0eS9jYXJlZXJidWlsZGVyLWNvbmctYm8tdG9wLTEwMC1uaGEtdHV5ZW4tZHVuZy15ZXUtdGhpY2gtbmFtLTIwMjIuMzVBNTIyQjguaHRtbA==&id=296',
+        target: '_blank',
+        imgSrc: 'https://images.careerbuilder.vn/background/eoc_2022_result_plb_1900x570_2023_03_29_1680091879.jpg',
+    },
+    second: {
+        href: 'https://careerbuilder.vn/vi/jobseekers/ajax/counterbannerclick?url=aHR0cHM6Ly9jYXJlZXJzdGFydC52bi8=&id=280',
+        target: '_blank',
+        imgSrc: 'https://images.careerbuilder.vn/background/careerstart_plb_desktop_1900x570_2022_08_15_1660563408.jpg',
+    },
+    third: {
+        href: 'https://careerbuilder.vn/vi/jobseekers/ajax/counterbannerclick?url=aHR0cHM6Ly9jYXJlZXJidWlsZGVyLnZuL3ZpL3RhbGVudGNvbW11bml0eS9uYW0tbW9pLWxhbS1tb2ktdGh1b25nLWhpZXUtY2Etbmhhbi4zNUE1MURCMS5odG1sP3V0bV9zb3VyY2U9Q0JiYW5uZXImYW1wO3V0bV9tZWRpdW09U2hhcmVQcm9maWxlJmFtcDt1dG1fY2FtcGFpZ249U2hhcmVQcm9maWxl&id=256',
+        target: '_blank',
+        imgSrc: 'https://images.careerbuilder.vn/background/cb-share-cv-profile-banner_plb_desktop_1900x570_2022_01_25_1643100421.jpg',
+    },
+}
 
 function Banner() {
   return (
@@ -9,51 +36,30 @@ function Banner() {
         <Section css={"cb-banner-home"}>
           <div className="banner-pc">
             <div className="swiper-container">
-              <div className="swiper-wrapper" id="pc-swiper-wrapper">
-                <div className="swiper-slide">
-                  {" "}
-                  <Link
-                    href="https://careerbuilder.vn/vi/jobseekers/ajax/counterbannerclick?url=aHR0cHM6Ly9jYXJlZXJidWlsZGVyLnZuL3ZpL3RhbGVudGNvbW11bml0eS9jYXJlZXJidWlsZGVyLWNvbmctYm8tdG9wLTEwMC1uaGEtdHV5ZW4tZHVuZy15ZXUtdGhpY2gtbmFtLTIwMjIuMzVBNTIyQjguaHRtbA==&id=296"
-                    rel="nofollow;noreferrer"
-                    target="_blank"
-                  >
-                    {" "}
-                    <div className="image">
-                      {" "}
-                      <img
-                        src="https://images.careerbuilder.vn/background/eoc_2022_result_plb_1900x570_2023_03_29_1680091879.jpg"
-                        alt="Banner"
-                      />{" "}
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="main-page">
-              <div className="swiper-pagination" />
-            </div>
-          </div>
-          <div className="banner-mobile">
-            <div className="swiper-container">
-              <div className="swiper-wrapper" id="mobile-swiper-wrapper">
-                <div className="swiper-slide">
-                  {" "}
-                  <Link
-                    href="https://careerbuilder.vn/vi/jobseekers/ajax/counterbannerclick?url=aHR0cHM6Ly9jYXJlZXJidWlsZGVyLnZuL3ZpL3RhbGVudGNvbW11bml0eS9jYXJlZXJidWlsZGVyLWNvbmctYm8tdG9wLTEwMC1uaGEtdHV5ZW4tZHVuZy15ZXUtdGhpY2gtbmFtLTIwMjIuMzVBNTIyQjguaHRtbA==&id=296"
-                    rel="nofollow;noreferrer"
-                    target="_blank"
-                  >
-                    {" "}
-                    <div className="image">
-                      {" "}
-                      <img
-                        src="https://images.careerbuilder.vn/background/eoc_2022_result_plb_640x430_2023_03_29_1680091879.png"
-                        alt="Banner"
-                      />{" "}
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                modules={[Pagination, Autoplay, EffectFade]}
+                loop={true}
+                effect={"fade"}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                className="swiper-wrapper"
+                id="pc-swiper-wrapper"
+              >
+                <SwiperSlide>
+                  <BannerItem children={BANNER_DATA.first} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <BannerItem children={BANNER_DATA.second} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <BannerItem children={BANNER_DATA.third} />
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className="main-page">
               <div className="swiper-pagination" />
@@ -70,7 +76,7 @@ function Banner() {
                     <span> 19,615 cơ hội nghề nghiệp </span>
                   </h1>
                 </div>
-                <form onsubmit="return false;">
+                <form onSubmit="return false;">
                   <div className="main-form">
                     <div className="row">
                       <div className="form-group col-12 form-keyword">

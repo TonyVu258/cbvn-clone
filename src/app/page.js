@@ -19,16 +19,16 @@ export default function Home() {
             id="top-employers-list"
             data-id="886,887,888,889,890,891"
           />
-          <div className="top-employers-banner">
+          <div className="top-employers-list">
             <div className="row">
               <div className="col-lg-6">
                 <div className="item">
-                  <div className="image adsTopBanner" id={846} />
+                  <div className="image" id={846} />
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="item">
-                  <div className="image adsTopBanner" id={847} />
+                  <div className="image" id={847} />
                 </div>
               </div>
             </div>
