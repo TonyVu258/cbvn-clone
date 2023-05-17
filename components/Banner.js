@@ -4,8 +4,8 @@ import Link from "next/link";
 import React from "react";
 import Section from "./Section/Section";
 import { Swiper, SwiperSlide } from "swiper/react";
-import BannerItem from "./BannerItem";
 import { Autoplay, EffectFade, Pagination } from "swiper";
+import BannerItem from "./BannerItem";
 
 import "swiper/css";
 import "swiper/css/pagination";

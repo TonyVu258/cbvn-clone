@@ -1,8 +1,40 @@
 import Banner from "../../components/Banner";
+import BannerPromo from "../../components/BannerPromo";
 import Header from "../../components/Header";
 import JobsItem from "../../components/JobsItem/JobsItem";
 import Section from "../../components/Section/Section";
 import "../styles/index.css";
+
+const DATA_BANNER_PROMO = {
+    first:{
+        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6352__zoneid=848__cb=d74e9fba31__oadest=https%3A%2F%2Fcareerstart.vn%2F",
+        target: "_blank",
+        img1Src: "https://ads.careerbuilder.vn/www/images/a5b2628391fac3d894caa7e1a29d12fa.jpg",
+        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6352&campaignid=1749&zoneid=848&loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&cb=d74e9fba31",
+        imgAlt: "Careerstart tuyendung"
+    },
+    second:{
+        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=6716__zoneid=848__cb=f68f85cfd4__oadest=https%3A%2F%2Fcareerbuilder.vn%2Fvi%2Ftalentcommunity%2Fcareerbuilder-cong-bo-top-100-nha-tuyen-dung-yeu-thich-nam-2022.35A522B8.html",
+        target: "_blank",
+        img1Src: "https://ads.careerbuilder.vn/www/images/40322bfe0026051c3092d837b500e854.jpg",
+        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=6716&amp;campaignid=1812&amp;zoneid=848&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=f68f85cfd4",
+        imgAlt: "EOC Result 2022"
+    },
+    third:{
+        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4738__zoneid=850__cb=331b419b20__oadest=https%3A%2F%2Fvietnamsalary.careerbuilder.vn%2F%3Futm_source%3DCB%26utm_medium%3DVNSalary%26utm_campaign%3DCBVNSalary",
+        target: "_blank",
+        img1Src: "https://ads.careerbuilder.vn/www/images/cd36bdd64ecdebbeeafc6347057ee992.png",
+        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4738&amp;campaignid=1349&amp;zoneid=850&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=331b419b20",
+        imgAlt: "Vietnam Salary"
+    },
+    fourth:{
+        href:"https://ads.careerbuilder.vn/www/delivery/ck.php?oaparams=2__bannerid=4739__zoneid=851__cb=77a765a0ce__oadest=https%3A%2F%2Fvieclamit.careerbuilder.vn%2F",
+        target: "_blank",
+        img1Src: "https://ads.careerbuilder.vn/www/images/b818531cf76fdafbf772e3d95f5f102a.png",
+        img2Src: "https://ads.careerbuilder.vn/www/delivery/lg.php?bannerid=4739&amp;campaignid=1349&amp;zoneid=851&amp;loc=https%3A%2F%2Fcareerbuilder.vn%2Fvi&amp;cb=77a765a0ce",
+        imgAlt: "Vieclam IT"
+    }
+}
 
 export default function Home() {
   return (
@@ -372,6 +404,53 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section
+        css={
+          "form-email-get-job lazy-bg bg-[url('https://images.careerbuilder.vn/content/Product/bg-4_3.jpg')]"
+        }
+      >
+        <div className="container form-email">
+          <div className="cb-title cb-title-center cb-title-white">
+            <h2>
+              Đăng ký theo dõi để nhận cập nhật về cơ hội việc làm mới và phù
+              hợp nhất
+            </h2>
+          </div>
+          <form
+            method="get"
+            id="home_page_created_jobalert"
+            action="https://careerbuilder.vn/thong-bao-viec-lam"
+          >
+            <div className="row">
+              <div className="col-xl-6">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Nhập địa chỉ email của bạn"
+                  />
+                  <button type="submit" className="btn-gradient">
+                    <span className="mdi mdi-pencil" />
+                    ĐĂNG KÝ NGAY
+                  </button>
+                  <div id="email_validate" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </Section>
+      <Section css={"banner-promo cb-section cb-section-border-bottom"}>
+      <div className="container">
+        <div className="row">
+          <BannerPromo children={DATA_BANNER_PROMO.first}/>
+          <BannerPromo children={DATA_BANNER_PROMO.second}/>
+          <BannerPromo children={DATA_BANNER_PROMO.third}/>
+          <BannerPromo children={DATA_BANNER_PROMO.fourth}/>
+        </div>
+      </div>
       </Section>
     </>
   );
