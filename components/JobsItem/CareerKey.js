@@ -93,8 +93,8 @@ function CareerKey() {
       }}
     >
       <SwiperSlide style={{transform: "translate3d(0px, 0px, 0px)"}}>
-        {DATA_CAREER_KEY.map((val) => (
-          <CareerKeyItem>{val}</CareerKeyItem>
+        {DATA_CAREER_KEY.map((val, index) => (
+          <CareerKeyItem key={index}>{val}</CareerKeyItem>
         ))}
       </SwiperSlide>
     </Swiper>

@@ -455,8 +455,7 @@ export default function Home() {
         </div>
       </Section>
       <Section
-        css={"banner-promo cb-section cb-section-border-bottom"}
-        style={{ border: "none" }}
+        css={"banner-promo cb-section"}
       >
         <div className="container">
           <div className="row">
