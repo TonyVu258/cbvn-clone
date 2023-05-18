@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-function TalenItem({ props = "" }) {
+function TalenItem({ css }) {
   return (
-    <div className="item bg-tips">
+    <div className={css}>
       <div className="img">
         <Link
           target="_blank"
@@ -12,6 +12,7 @@ function TalenItem({ props = "" }) {
         >
           <img
             className="swiper-lazy"
+            data-src="https://images.careerbuilder.vn/tintuc/career/20230515/crop/319x319/1684143734_12-khoan-tien-cua-nguoi-lao-dong-se-tang-khi-tang-luong-co-so-careerbuilder.jpg"
             src="https://images.careerbuilder.vn/tintuc/career/20230515/crop/319x319/1684143734_12-khoan-tien-cua-nguoi-lao-dong-se-tang-khi-tang-luong-co-so-careerbuilder.jpg"
             alt="12 khoản tiền của người lao động sẽ tăng khi tăng lương cơ sở"
           />

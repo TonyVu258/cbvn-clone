@@ -541,3 +541,10 @@ footer {
 a:hover {
     cursor: pointer;
 }
+
+.swiper-button-disabled {
+    opacity: .35 !important;
+    cursor: auto !important;
+    pointer-events: none !important;
+    display: none !important;
+}

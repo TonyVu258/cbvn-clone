@@ -8,6 +8,7 @@ import Section from "../../components/Section/Section";
 import "../styles/index.css";
 import CareerKey from "../../components/JobsItem/CareerKey";
 import Talen from "../../components/JobsItem/Talen";
+import Footer from "../../components/Footer";
 
 const DATA_BANNER_PROMO = {
   first: {
@@ -454,9 +455,7 @@ export default function Home() {
           </form>
         </div>
       </Section>
-      <Section
-        css={"banner-promo cb-section"}
-      >
+      <Section css={"banner-promo cb-section"}>
         <div className="container">
           <div className="row">
             <BannerPromo>{DATA_BANNER_PROMO.first}</BannerPromo>
@@ -472,25 +471,11 @@ export default function Home() {
             <h2>Ngành Nghề Trọng Điểm</h2>
           </div>
           <div className="career-key-slide">
-              <CareerKey />
-            <div className="swiper-navigation">
-              <div
-                className="swiper-btn swiper-prev"
-                style={{ background: "transparent", marginLeft: "-40px" }}
-              >
-                <em
-                  className="lnr lnr-chevron-left"
-                  style={{ background: "transparent", marginRight: "-40px" }}
-                />
-              </div>
-              <div className="swiper-btn swiper-next">
-                <em className="lnr lnr-chevron-right" />
-              </div>
-            </div>
+            <CareerKey />
           </div>
         </div>
       </Section>
-      <Section css={"talent-network cb-section cb-section-border-bottom"}>
+      <Section css={"talent-network cb-section"}>
         <div className="container">
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-5">
@@ -697,13 +682,7 @@ export default function Home() {
           </div>
           <div className="career-development-slide">
             <div className="swiper-container">
-              <Talen/>
-            </div>
-            <div className="swiper-prev">
-              <span className="lnr lnr-chevron-left" />
-            </div>
-            <div className="swiper-next">
-              <span className="lnr lnr-chevron-right" />
+              <Talen />
             </div>
           </div>
           <div className="view-more">
@@ -717,6 +696,36 @@ export default function Home() {
           </div>
         </div>
       </Section>
+      <Section
+        css={
+          "post-a-job lazy-bg bg-[url(https://images.careerbuilder.vn/content/Product/bg-3_3.jpg)]"
+        }
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="text">
+                <span>Dành cho nhà tuyển dụng</span>
+                <h3>Bạn có vị trí cần đăng tuyển?</h3>
+                <p>
+                  Chúng tôi có những giải pháp tối ưu phù hợp với
+                  <br /> nhiều loại hình công ty và tiêu chuẩn riêng
+                </p>
+              </div>
+              <div className="post-a-job-btn">
+                <a
+                  className="btn-gradient"
+                  href="https://careerbuilder.vn/vi/employers/postjobs"
+                  target="_blank"
+                >
+                  Đăng tin Tuyển dụng
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Footer/>
     </>
   );
 }
