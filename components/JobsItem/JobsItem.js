@@ -1,42 +1,19 @@
 import React from "react";
 
-function JobsItem({
-  companyHref,
-  companyTitle,
-  imgSrc,
-  dataScr,
-  jobTitle,
-  jobHref,
-  jobSalary,
-  jobLocation,
-  isTop = false,
-}) {
+function JobsItem({ children }) {
   return (
     <>
       <div className="col-lg-6 ">
         <div className="job-item">
           <div className="figure">
             <div className="image">
-              <a
-                target="_blank"
-                href={companyHref}
-                title={companyTitle}
-              >
-                <img
-                  src={imgSrc}
-                  className="swiper-lazy"
-                  data-src={dataScr}
-                  alt={companyTitle}
-                />
+              <a target="_blank" href={companyHref} title={companyTitle}>
+                <img src={imgSrc} className="swiper-lazy" alt={companyTitle} />
               </a>
             </div>
             <div className="figcaption">
               <div className="title">
-                <a
-                  target="_blank"
-                  href={jobHref}
-                  title={jobTitle}
-                >
+                <a target="_blank" href={jobHref} title={jobTitle}>
                   {jobTitle}
                 </a>
               </div>
@@ -55,7 +32,7 @@ function JobsItem({
                 </p>
                 <div className="location">
                   <em className="mdi mdi-map-marker" />
-                  <p>{" "}{jobLocation}</p>
+                  <p> {jobLocation}</p>
                 </div>
               </div>
             </div>
