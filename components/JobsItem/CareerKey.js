@@ -106,9 +106,9 @@ function CareerKey() {
           },
         }}
       >
-        {DATA_CAREER_KEY.map((val, index) => (
+        {DATA_CAREER_KEY.map((val) => (
           <SwiperSlide>
-            <CareerKeyItem key={index}>{val}</CareerKeyItem>
+            <CareerKeyItem key={val}>{val}</CareerKeyItem>
           </SwiperSlide>
         ))}
       </Swiper>

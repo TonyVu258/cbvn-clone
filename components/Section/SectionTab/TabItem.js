@@ -1,19 +1,25 @@
 import React from "react";
 import JobsItem from "../../JobsItem/JobsItem";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 function TabItem({ children, tapID, tabClass }) {
   return (
     <div className="tab-content" id={tapID}>
       <div className="hot-jobs-slide" id={tabClass}>
-        <div className="swiper-container">
+        <Swiper className={"swiper-container"}
+        
+        >
           <div className="swiper-wrapper">
-            {" "}
-            <div className="swiper-slide">
-              <div className="row">
-                <JobsItem>{children}</JobsItem>
-              </div>
-            </div>
+            {children.map((val, index) => (
+              <SwiperSlide key={index} className={"swiper-slide-duplicate"}>
+                <JobsItem>{val}</JobsItem>
+              </SwiperSlide>
+            ))}
           </div>
+        </Swiper>
+        {/* <div className="swiper-container">
           <div className="swiper-bottom">
             <div className="swiper-navigation">
               <div className="swiper-prev">
@@ -33,7 +39,7 @@ function TabItem({ children, tapID, tabClass }) {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

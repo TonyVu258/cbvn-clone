@@ -74,7 +74,7 @@ function Banner() {
                     <span> 19,615 cơ hội nghề nghiệp </span>
                   </h1>
                 </div>
-                <form onSubmit="return false;">
+                <form>
                   <div className="main-form">
                     <div className="row">
                       <div className="form-group col-12 form-keyword">
@@ -84,7 +84,7 @@ function Banner() {
                         <input
                           type="search"
                           className="prompt keyword"
-                          autofocus=""
+                          autoFocus={true}
                           name="keyword"
                           id="keyword"
                           placeholder="Chức danh, Kỹ năng, Tên công ty"
@@ -94,7 +94,7 @@ function Banner() {
                         </div>
                       </div>
                     </div>
-                    <div className="advanced-search">
+                    {/* <div className="advanced-search">
                       <div className="row">
                         <div className="form-group col-sm-6">
                           <label>
@@ -486,14 +486,14 @@ function Banner() {
                           </select>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="reset-form">
-                    <a tabIndex={0} role="button" onClick="resetForm();">
+                    <a tabIndex={0} role="button">
                       <i className="fa fa-rotate-right" /> Reset
                     </a>
                   </div>
-                  <div className="toggle-search">
+                  {/* <div className="toggle-search">
                     <div className="advanced-search-btn">
                       <a tabIndex={0} role="button">
                         <span className="mdi mdi-magnify-plus-outline" />
@@ -507,11 +507,10 @@ function Banner() {
                         Thu gọn
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="find-jobs">
                     <button
                       className="btn-gradient"
-                      onClick="return validataSearchHomePage('vi');"
                     >
                       TÌM VIỆC NGAY
                     </button>
@@ -526,7 +525,6 @@ function Banner() {
                   {" "}
                   <button
                     className="btn-gradient"
-                    onClick="window.location='https://careerbuilder.vn/vi/jobseekers/quick_upload_resume'"
                   >
                     ĐĂNG NGAY
                   </button>

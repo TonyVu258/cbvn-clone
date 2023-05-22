@@ -29,7 +29,6 @@ function BannerPromo({ children }) {
               width={0}
               height={0}
               alt={children.imgAlt}
-              style={{ width: 0, height: 0 }}
             />
           </div>
         </div>

@@ -285,22 +285,24 @@ const DATA_JOB = {
       jobLocation: "76A Út Tịch, Phường 4, Quận Tân Bình",
       isTop: true,
     },
-  ]
+  ],
 };
 
 function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
+  let currentIndex = array.length,
+    randomIndex;
 
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
-
     // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
     // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 
   return array;
@@ -308,11 +310,10 @@ function shuffle(array) {
 
 function SectionTab() {
   const [tab, setTab] = useState("tab-1");
-
   return (
     <div className="tabs">
       <ul className="tabs-toggle">
-        <li className={tab === "tab-1" && "active"}>
+        <li className={tab === "tab-1" ? "active" : ""}>
           <a
             tabIndex={0}
             role="button"
@@ -323,7 +324,7 @@ function SectionTab() {
             Việc Làm Nổi Bật
           </a>
         </li>
-        <li className={tab === "tab-2" && "active"}>
+        <li className={tab === "tab-2" ? "active" : ""}>
           <a
             tabIndex={0}
             role="button"
@@ -334,7 +335,7 @@ function SectionTab() {
             Việc Làm VIP ($1000+)
           </a>
         </li>
-        <li className={tab === "tab-3" && "active"}>
+        <li className={tab === "tab-3" ? "active" : ""}>
           <a
             tabIndex={0}
             role="button"
@@ -346,10 +347,12 @@ function SectionTab() {
           </a>
         </li>
       </ul>
-      {tab === "tab-1" && <TabItem tapID={tab} tabClass={"hot-jobs-slide"}>{DATA_JOB.hot_jobs}</TabItem>}
-      {tab === "tab-2" && <TabItem tapID={tab} tabClass={"vip-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>}
-      {tab === "tab-3" && <TabItem tapID={tab} tabClass={"topheadhunt-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>}
-      <div className="tab-content" id="tab-2">
+      {tab === "tab-1" && (
+        <TabItem tapID={tab} tabClass={"hot-jobs-slide"} children={DATA_JOB.hot_jobs}/>
+      )}
+      {/* {tab === "tab-2" && <TabItem tapID={tab} tabClass={"vip-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
+      {/* {tab === "tab-3" && <TabItem tapID={tab} tabClass={"topheadhunt-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
+      {/* <div className="tab-content" id="tab-2">
         <div className="hot-jobs-slide" id="vip-jobs-slide">
           <div className="swiper-container">
             <div className="swiper-wrapper" />
@@ -403,7 +406,7 @@ function SectionTab() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
