@@ -348,7 +348,7 @@ function SectionTab() {
         </li>
       </ul>
       {tab === "tab-1" && (
-        <TabItem tapID={tab} tabClass={"hot-jobs-slide"} children={DATA_JOB.hot_jobs}/>
+        <TabItem tapID={tab} tabClass={"hot-jobs-slide"}>{DATA_JOB.hot_jobs}</TabItem>
       )}
       {/* {tab === "tab-2" && <TabItem tapID={tab} tabClass={"vip-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
       {/* {tab === "tab-3" && <TabItem tapID={tab} tabClass={"topheadhunt-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
