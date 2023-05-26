@@ -348,65 +348,20 @@ function SectionTab() {
         </li>
       </ul>
       {tab === "tab-1" && (
-        <TabItem tapID={tab} tabClass={"hot-jobs-slide"}>{DATA_JOB.hot_jobs}</TabItem>
+        <TabItem tapID={tab} tabClass={"hot-jobs-slide"}>
+          {DATA_JOB.hot_jobs}
+        </TabItem>
       )}
-      {/* {tab === "tab-2" && <TabItem tapID={tab} tabClass={"vip-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
-      {/* {tab === "tab-3" && <TabItem tapID={tab} tabClass={"topheadhunt-jobs-slide"}>{shuffle(DATA_JOB.hot_jobs)}</TabItem>} */}
-      {/* <div className="tab-content" id="tab-2">
-        <div className="hot-jobs-slide" id="vip-jobs-slide">
-          <div className="swiper-container">
-            <div className="swiper-wrapper" />
-            <div className="swiper-bottom">
-              <div className="swiper-navigation">
-                <div className="swiper-prev">
-                  <span className="mdi mdi-chevron-left" />
-                </div>
-                <div className="main-pagination">
-                  <div className="swiper-pagination" />
-                </div>
-                <div className="swiper-next">
-                  <span className="mdi mdi-chevron-right" />
-                </div>
-              </div>
-              <div className="view-more">
-                <a href="https://careerbuilder.vn/viec-lam/muc-luong-20trvnd-s20-vi.html">
-                  Xem việc làm mới cập nhật
-                  <span className="mdi mdi-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="tab-content" id="tab-3">
-        <div className="hot-jobs-slide" id="topheadhunt-jobs-slide">
-          <div className="swiper-container">
-            <div className="swiper-wrapper" />
-            <div className="swiper-bottom">
-              <div className="swiper-navigation">
-                <div className="swiper-prev">
-                  <span className="mdi mdi-chevron-left" />
-                </div>
-                <div className="main-pagination">
-                  <div className="swiper-pagination" />
-                </div>
-                <div className="swiper-next">
-                  <span className="mdi mdi-chevron-right" />
-                </div>
-              </div>
-              <div className="view-more">
-                <a
-                  href="https://careerbuilder.vn/top-headhunt?utm_source=Home_TopHeadhunt&utm_medium=TopHeadhunt&utm_campaign=Promote_TopHeadhunt"
-                  target="_blank"
-                >
-                  Việc Làm Từ Top Headhunter
-                  <span className="mdi mdi-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      {tab === "tab-2" && (
+        <TabItem tapID={tab} tabClass={"vip-jobs-slide"}>
+          {shuffle(DATA_JOB.hot_jobs)}
+        </TabItem>
+      )}
+      {tab === "tab-3" && (
+        <TabItem tapID={tab} tabClass={"topheadhunt-jobs-slide"}>
+          {shuffle(DATA_JOB.hot_jobs)}
+        </TabItem>
+      )}
     </div>
   );
 }

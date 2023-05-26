@@ -1,45 +1,46 @@
 import React from "react";
 import JobsItem from "../../JobsItem/JobsItem";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+
+import "swiper/css/pagination";
 
 import "swiper/css";
 
 function TabItem({ children, tapID, tabClass }) {
+  var res = children.reduce((a, c, i) => {
+    return i % 5 === 0 ? a.concat([children.slice(i, i + 5)]) : a;
+  }, []);
+  var group = res.reduce((a, c, i) => {
+    return i % 2 === 0 ? a.concat([res.slice(i, i + 2)]) : a;
+  }, []);
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}"></span>`;
+    },
+  };
   return (
     <div className="tab-content" id={tapID}>
       <div className="hot-jobs-slide" id={tabClass}>
-        <Swiper className={"swiper-container"}
-        
+        <Swiper
+          className={"swiper-container"}
+          loop={true}
+          pagination={pagination}
+          autoplay={true}
+          modules={[Pagination, Autoplay]}
         >
           <div className="swiper-wrapper">
-            {children.map((val, index) => (
-              <SwiperSlide key={index} className={"swiper-slide-duplicate"}>
-                <JobsItem>{val}</JobsItem>
+            {group.map((array, index) => (
+              <SwiperSlide key={index} className="swiper-slide-duplicate">
+                <div className="row">
+                  <JobsItem>{array[0]}</JobsItem>
+                  <JobsItem>{array[1]}</JobsItem>
+                </div>
               </SwiperSlide>
-            ))}
+            ))}{" "}
           </div>
         </Swiper>
-        {/* <div className="swiper-container">
-          <div className="swiper-bottom">
-            <div className="swiper-navigation">
-              <div className="swiper-prev">
-                <span className="mdi mdi-chevron-left" />
-              </div>
-              <div className="main-pagination">
-                <div className="swiper-pagination" />
-              </div>
-              <div className="swiper-next">
-                <span className="mdi mdi-chevron-right" />
-              </div>
-            </div>
-            <div className="view-more">
-              <a href="https://careerbuilder.vn/viec-lam/tat-ca-viec-lam-vi.html">
-                Xem việc làm mới cập nhật
-                <span className="mdi mdi-arrow-right" />
-              </a>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
